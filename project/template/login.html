@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script type="text/javascript" charset="UTF-8" src="{{ static_url('js/jquery-3.4.1.min.js') }}"></script>
+</head>
+<body>
+    <form action="{{ url }}" method="post">
+        {% module xsrf_form_html() %}
+        用户名: <input type="text" name="username">
+        <br>
+        密码: <input type="password" name="password">
+        <br>
+        <input type="submit" value="login">
+    </form>
+
+    <!--用户名: <input type="text" id="name" placeholder="输入用户名">
+    <br>
+    密码: <input type="password" id="pwd" placeholder="输入密码">
+    <br>
+    <button onclick="login()">login</button>
+
+    <script type="text/javascript">
+        function getCookie(name) {
+            var c = document.cookie.match("\\b" + name + "=([^;]*)\\b")
+            return c ? c[1] : undefined
+        }
+
+        function login() {
+            data = {
+                "username": document.getElementById("name").value,
+                "password": document.getElementById("pwd").value
+            }
+            var dataStr = JSON.stringify(data)
+            $.ajax({
+                url: "{{ url }}",
+                method: "POST",
+                data: "dataStr",
+                success: function (data) {
+                    alert("OK")
+                },
+                headers: {
+                    "X-XSRFToken": getCookie("_xsrf")
+                }
+            })
+        }
+    </script>-->
+</body>
+</html>
