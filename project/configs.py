@@ -11,7 +11,7 @@ options = {
 mysql = {
     "host": "127.0.0.1",
     "user": "root",
-    "passwd": "frank134",
+    "passwd": "abcabc",
     "dbName": "",
 }
 
